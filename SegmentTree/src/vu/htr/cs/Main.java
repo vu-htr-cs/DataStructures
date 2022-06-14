@@ -48,4 +48,29 @@ public class Main {
             m--;
         }
     }
+    public static void itlazy(){
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Nhap n");
+        int n=sc.nextInt();
+        Itlazy it= new Itlazy();
+        for(int i=0;i<n;i++){
+            it.a[i]=sc.nextInt();
+        }
+        it.build(0,0,n-1);
+        System.out.print("Nhap q");
+        int q=sc.nextInt();
+        while(q-- >0){
+            int type= sc.nextInt();
+            int l= sc.nextInt();
+            int r=sc.nextInt();
+
+            if(type==1){
+                System.out.println("Nhap val");
+                int val=sc.nextInt();
+                it.update(0,0,n-1,l,r,val);
+            }
+            else
+                System.out.println(it.get(0,0,n-1,l,r));
+        }
+    }
 }
