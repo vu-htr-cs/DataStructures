@@ -9,7 +9,7 @@ public class BitUEH {
         this.input=new int[capacity+1];
     }
     public double get(int x){
-        int s=0;
+        double s=0;
         while(x>0){
             s+=bit[x];
             x-=x&(-x);
